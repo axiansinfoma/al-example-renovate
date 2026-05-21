@@ -72,11 +72,16 @@
       "matchManagers": [
         "custom.jsonata"
       ],
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(\\.(?<build>\\d+))?$"
+    },
+    {
+      "matchManagers": [
+        "custom.jsonata"
+      ],
       "groupName": "Business Central Microsoft dependencies",
       "matchPackageNames": [
         "/^Microsoft\\./"
-      ],
-      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(\\.(?<build>\\d+))?$"
+      ]
     },
     {
       "matchManagers": [
