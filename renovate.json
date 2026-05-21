@@ -76,9 +76,7 @@
       "matchPackageNames": [
         "/^Microsoft\\./"
       ],
-      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)",
-      "versionCompatibility": "^(?<version>\\d+\\.\\d+)",
-      "extractVersion": "^(?<version>\\d+\\.\\d+)\\."
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(\\.(?<build>\\d+))?$"
     },
     {
       "matchManagers": [
