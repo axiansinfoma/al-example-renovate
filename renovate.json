@@ -71,28 +71,10 @@
       "matchManagers": [
         "custom.jsonata"
       ],
-      "matchDatasources": [
-        "nuget"
+      "matchPackagePatterns": [
+        "^Microsoft\\."
       ],
-      "groupName": "Business Central extension dependencies"
-    },
-    {
-      "matchManagers": [
-        "custom.jsonata"
-      ],
-      "matchPackageNames": [
-        "Microsoft.Application.symbols"
-      ],
-      "groupName": "Business Central Application"
-    },
-    {
-      "matchManagers": [
-        "custom.jsonata"
-      ],
-      "matchPackageNames": [
-        "Microsoft.Platform.symbols"
-      ],
-      "groupName": "Business Central Platform"
+      "groupName": "Business Central Microsoft dependencies"
     },
     {
       "matchManagers": [
