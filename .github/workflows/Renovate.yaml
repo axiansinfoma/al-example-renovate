@@ -21,3 +21,4 @@ jobs:
         env:
           RENOVATE_REPOSITORIES: ${{ github.repository }}
           RENOVATE_ALLOWED_POST_UPGRADE_COMMANDS: '["^sed\\s+-i"]'
+          LOG_LEVEL: debug
