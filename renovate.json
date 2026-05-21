@@ -75,7 +75,10 @@
       "groupName": "Business Central Microsoft dependencies",
       "matchPackageNames": [
         "/^Microsoft\\./"
-      ]
+      ],
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)",
+      "versionCompatibility": "^(?<version>\\d+\\.\\d+)",
+      "extractVersion": "^(?<version>\\d+\\.\\d+)\\."
     },
     {
       "matchManagers": [
