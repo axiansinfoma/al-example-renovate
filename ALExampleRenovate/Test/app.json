@@ -28,7 +28,7 @@
       "id": "c1335042-3002-4257-bf8a-75c898ccb1b3",
       "name": "Application",
       "publisher": "Microsoft",
-      "version": "25.0.0.0"
+      "version": "28.1.49838.50198"
     },
     {
       "id": "5d86850b-0d76-4eca-bd7b-951ad998e997",
@@ -50,8 +50,8 @@
     }
   ],
   "screenshots": [],
-  "platform": "1.0.0.0",
-  "application": "25.0.0.0",
+  "platform": "28.0.50354",
+  "application": "28.1.49838.50198",
   "idRanges": [
     {
       "from": 50000,
