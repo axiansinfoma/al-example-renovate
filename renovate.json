@@ -12,7 +12,7 @@
         "**/app.json"
       ],
       "matchStrings": [
-        "$append(application ? [{\"depName\": \"Application\", \"packageName\": \"Microsoft.Application.symbols\", \"currentValue\": application}] : [], dependencies[name='Application' and publisher='Microsoft'].{\"depName\": \"Application\", \"packageName\": \"Microsoft.Application.symbols\", \"currentValue\": version})"
+        "application ? [{\"depName\": \"Application\", \"packageName\": \"Microsoft.Application.symbols\", \"currentValue\": application}] : []"
       ],
       "datasourceTemplate": "nuget",
       "registryUrlTemplate": "https://pkgs.dev.azure.com/dynamicssmb2/DynamicsBCPublicFeeds/_packaging/MSSymbolsV2/nuget/v3/index.json",
@@ -25,7 +25,7 @@
         "**/app.json"
       ],
       "matchStrings": [
-        "$append(platform ? [{\"depName\": \"Platform\", \"packageName\": \"Microsoft.Platform.symbols\", \"currentValue\": platform}] : [], dependencies[name='Platform' and publisher='Microsoft'].{\"depName\": \"Platform\", \"packageName\": \"Microsoft.Platform.symbols\", \"currentValue\": version})"
+        "platform ? [{\"depName\": \"Platform\", \"packageName\": \"Microsoft.Platform.symbols\", \"currentValue\": platform}] : []"
       ],
       "datasourceTemplate": "nuget",
       "registryUrlTemplate": "https://pkgs.dev.azure.com/dynamicssmb2/DynamicsBCPublicFeeds/_packaging/MSSymbolsV2/nuget/v3/index.json",
