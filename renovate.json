@@ -65,7 +65,7 @@
       "matchDatasources": [
         "nuget"
       ],
-      "groupName": "Business Central AL dependencies"
+      "groupName": "Business Central extension dependencies"
     },
     {
       "matchManagers": [
@@ -75,7 +75,7 @@
         "Microsoft.Application.symbols",
         "Microsoft.Platform.symbols"
       ],
-      "groupName": "Business Central core symbols"
+      "groupName": "Business Central core"
     },
     {
       "matchManagers": [
