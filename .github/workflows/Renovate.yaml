@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: "0 4 * * *"
   workflow_dispatch:
+    inputs:
+      log_level:
+        description: Renovate log level
+        required: false
+        default: info
+        type: choice
+        options:
+          - info
+          - debug
 
 permissions:
   contents: read
@@ -21,4 +30,4 @@ jobs:
         env:
           RENOVATE_REPOSITORIES: ${{ github.repository }}
           RENOVATE_ALLOWED_POST_UPGRADE_COMMANDS: '["^sed\\s+-i"]'
-          LOG_LEVEL: debug
+          LOG_LEVEL: ${{ inputs.log_level || 'info' }}
