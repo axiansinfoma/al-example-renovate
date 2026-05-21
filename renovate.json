@@ -75,6 +75,9 @@
       "matchDatasources": [
         "nuget"
       ],
+      "excludePackagePatterns": [
+        "^Microsoft\\."
+      ],
       "groupName": "Business Central AL dependencies"
     },
     {
