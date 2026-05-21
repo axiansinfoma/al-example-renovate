@@ -2,5 +2,80 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "customManagers": [
+    {
+      "customType": "jsonata",
+      "fileFormat": "json",
+      "managerFilePatterns": [
+        "**/app.json"
+      ],
+      "matchStrings": [
+        "application ? [{\"depName\": \"Application\", \"packageName\": \"Microsoft.Application.symbols\", \"currentValue\": application}] : []"
+      ],
+      "datasourceTemplate": "nuget",
+      "registryUrlTemplate": "https://pkgs.dev.azure.com/dynamicssmb2/DynamicsBCPublicFeeds/_packaging/MSSymbolsV2/nuget/v3/index.json",
+      "versioningTemplate": "loose"
+    },
+    {
+      "customType": "jsonata",
+      "fileFormat": "json",
+      "managerFilePatterns": [
+        "**/app.json"
+      ],
+      "matchStrings": [
+        "platform ? [{\"depName\": \"Platform\", \"packageName\": \"Microsoft.Platform.symbols\", \"currentValue\": platform}] : []"
+      ],
+      "datasourceTemplate": "nuget",
+      "registryUrlTemplate": "https://pkgs.dev.azure.com/dynamicssmb2/DynamicsBCPublicFeeds/_packaging/MSSymbolsV2/nuget/v3/index.json",
+      "versioningTemplate": "loose"
+    },
+    {
+      "customType": "jsonata",
+      "fileFormat": "json",
+      "managerFilePatterns": [
+        "**/app.json"
+      ],
+      "matchStrings": [
+        "dependencies[publisher='Microsoft'].{\"depName\": publisher & '/' & name, \"packageName\": publisher & '.' & $replace(name, /\\s+/, '') & '.symbols.' & id, \"currentValue\": version}"
+      ],
+      "datasourceTemplate": "nuget",
+      "registryUrlTemplate": "https://pkgs.dev.azure.com/dynamicssmb2/DynamicsBCPublicFeeds/_packaging/MSSymbolsV2/nuget/v3/index.json",
+      "versioningTemplate": "loose"
+    },
+    {
+      "customType": "jsonata",
+      "fileFormat": "json",
+      "managerFilePatterns": [
+        "**/app.json"
+      ],
+      "matchStrings": [
+        "dependencies[publisher!='Microsoft'].{\"depName\": publisher & '/' & name, \"packageName\": publisher & '.' & $replace(name, /\\s+/, '') & '.symbols.' & id, \"currentValue\": version}"
+      ],
+      "datasourceTemplate": "nuget",
+      "registryUrlTemplate": "https://pkgs.dev.azure.com/dynamicssmb2/DynamicsBCPublicFeeds/_packaging/AppSourceSymbols/nuget/v3/index.json",
+      "versioningTemplate": "loose"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchManagers": [
+        "custom.jsonata"
+      ],
+      "matchDatasources": [
+        "nuget"
+      ],
+      "groupName": "Business Central AL dependencies"
+    },
+    {
+      "matchManagers": [
+        "custom.jsonata"
+      ],
+      "matchPackageNames": [
+        "Microsoft.Application.symbols",
+        "Microsoft.Platform.symbols"
+      ],
+      "groupName": "Business Central core symbols"
+    }
   ]
 }
