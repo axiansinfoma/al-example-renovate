@@ -2,6 +2,12 @@
     "folders": [
         {
             "path": ".AL-Go"
+        },
+        {
+            "path": "ALExampleRenovate/App"
+        },
+        {
+            "path": "ALExampleRenovate/Test"
         }
     ],
     "settings": {}
