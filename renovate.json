@@ -65,6 +65,15 @@
       "matchDatasources": [
         "nuget"
       ],
+      "newValueTemplate": "{{newMajor}}.{{newMinor}}.{{newPatch}}.{{#if newRevision}}{{newRevision}}{{else}}0{{/if}}"
+    },
+    {
+      "matchManagers": [
+        "custom.jsonata"
+      ],
+      "matchDatasources": [
+        "nuget"
+      ],
       "groupName": "Business Central extension dependencies"
     },
     {
@@ -72,10 +81,18 @@
         "custom.jsonata"
       ],
       "matchPackageNames": [
-        "Microsoft.Application.symbols",
+        "Microsoft.Application.symbols"
+      ],
+      "groupName": "Business Central Application"
+    },
+    {
+      "matchManagers": [
+        "custom.jsonata"
+      ],
+      "matchPackageNames": [
         "Microsoft.Platform.symbols"
       ],
-      "groupName": "Business Central core"
+      "groupName": "Business Central Platform"
     },
     {
       "matchManagers": [
