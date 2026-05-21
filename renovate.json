@@ -59,7 +59,7 @@
   ],
   "postUpgradeTasks": {
     "commands": [
-      "node -e \"const fs=require('fs'),f='{{{packageFile}}}',d=JSON.parse(fs.readFileSync(f));const n=v=>v&&v.split('.').length===3?v+'.0':v;['application','platform'].forEach(k=>{if(d[k])d[k]=n(d[k])});if(d.dependencies)d.dependencies=d.dependencies.map(x=>({...x,version:n(x.version)}));fs.writeFileSync(f,JSON.stringify(d,null,2));\""
+      "sed -i -E 's/(\"(version|application|platform)\": \")([0-9]+\\.[0-9]+\\.[0-9]+)\"/\\1\\3.0\"/g' {{{packageFile}}}"
     ],
     "fileFilters": [
       "**/app.json"
