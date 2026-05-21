@@ -28,6 +28,12 @@
       "name": "Axians System Application",
       "publisher": "Axians Infoma",
       "version": "7.0.17.0"
+    },
+    {
+      "id": "5491b2df-228f-423d-b36a-bcfb380f4f5a",
+      "name": "Moxa-2-PrintVis IoT Connector",
+      "publisher": "1Vision365",
+      "version": "26.0.0.1"
     }
   ],
   "screenshots": [],
