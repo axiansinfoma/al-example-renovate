@@ -72,10 +72,10 @@
       "matchManagers": [
         "custom.jsonata"
       ],
-      "matchPackagePatterns": [
-        "^Microsoft\\."
-      ],
-      "groupName": "Business Central Microsoft dependencies"
+      "groupName": "Business Central Microsoft dependencies",
+      "matchPackageNames": [
+        "/^Microsoft\\./"
+      ]
     },
     {
       "matchManagers": [
