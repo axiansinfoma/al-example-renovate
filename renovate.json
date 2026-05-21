@@ -37,7 +37,7 @@
         "**/app.json"
       ],
       "matchStrings": [
-        "dependencies[publisher='Microsoft' and name != 'Application' and name != 'Platform'].{\"depName\": publisher & '/' & name, \"packageName\": publisher & '.' & $replace(name, /\\s+/, '') & '.symbols.' & id, \"currentValue\": version}"
+        "dependencies[publisher='Microsoft' and name != 'Application' and name != 'Platform'].{\"depName\": publisher & '/' & name, \"packageName\": $replace(publisher, /\\s+/, '') & '.' & $replace(name, /\\s+/, '') & '.symbols.' & id, \"currentValue\": version}"
       ],
       "datasourceTemplate": "nuget",
       "registryUrlTemplate": "https://pkgs.dev.azure.com/dynamicssmb2/DynamicsBCPublicFeeds/_packaging/MSSymbolsV2/nuget/v3/index.json",
@@ -50,7 +50,7 @@
         "**/app.json"
       ],
       "matchStrings": [
-        "dependencies[publisher!='Microsoft'].{\"depName\": publisher & '/' & name, \"packageName\": publisher & '.' & $replace(name, /\\s+/, '') & '.symbols.' & id, \"currentValue\": version}"
+        "dependencies[publisher!='Microsoft'].{\"depName\": publisher & '/' & name, \"packageName\": $replace(publisher, /\\s+/, '') & '.' & $replace(name, /\\s+/, '') & '.symbols.' & id, \"currentValue\": version}"
       ],
       "datasourceTemplate": "nuget",
       "registryUrlTemplate": "https://pkgs.dev.azure.com/dynamicssmb2/DynamicsBCPublicFeeds/_packaging/AppSourceSymbols/nuget/v3/index.json",
