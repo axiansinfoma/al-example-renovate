@@ -76,6 +76,7 @@
         "^Microsoft\\."
       ],
       "groupName": "Business Central Microsoft dependencies",
+      "versioning": "regex:^(?<major>\\d+)",
       "versionCompatibility": "^(?<version>\\d+)\\.0\\.0\\.0$",
       "extractVersion": "^(?<version>\\d+)\\."
     },
