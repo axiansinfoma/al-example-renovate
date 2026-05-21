@@ -72,22 +72,12 @@
       "matchManagers": [
         "custom.jsonata"
       ],
-      "matchDatasources": [
-        "nuget"
-      ],
-      "excludePackagePatterns": [
-        "^Microsoft\\."
-      ],
-      "groupName": "Business Central AL dependencies"
-    },
-    {
-      "matchManagers": [
-        "custom.jsonata"
-      ],
       "matchPackagePatterns": [
         "^Microsoft\\."
       ],
-      "groupName": "Business Central Microsoft dependencies"
+      "groupName": "Business Central Microsoft dependencies",
+      "versionCompatibility": "^(?<version>\\d+)\\.0\\.0\\.0$",
+      "extractVersion": "^(?<version>\\d+)\\."
     },
     {
       "matchManagers": [
