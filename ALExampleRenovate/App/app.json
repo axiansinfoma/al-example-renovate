@@ -1,5 +1,4 @@
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/AL/master/resources/schemas/app.json",
   "id": "a8f9e1d2-3b4c-5678-9abc-def012345678",
   "name": "AL Example Renovate",
   "publisher": "Axians Infoma GmbH",

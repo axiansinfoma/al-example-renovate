@@ -1,5 +1,4 @@
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/AL/master/resources/schemas/app.json",
   "id": "b9f0e2d3-4c5d-6789-abcd-ef0123456789",
   "name": "AL Example Renovate Tests",
   "publisher": "Axians Infoma GmbH",
