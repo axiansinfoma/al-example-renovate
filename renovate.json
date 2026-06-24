@@ -16,7 +16,8 @@
       ],
       "datasourceTemplate": "nuget",
       "registryUrlTemplate": "https://pkgs.dev.azure.com/dynamicssmb2/DynamicsBCPublicFeeds/_packaging/MSSymbolsV2/nuget/v3/index.json",
-      "versioningTemplate": "nuget"
+      "versioningTemplate": "nuget",
+      "autoReplaceStringTemplate": "{{replace \"^(\\d+\\.\\d+\\.\\d+)$\" \"$1.0\" newValue}}"
     },
     {
       "customType": "jsonata",
@@ -29,7 +30,8 @@
       ],
       "datasourceTemplate": "nuget",
       "registryUrlTemplate": "https://pkgs.dev.azure.com/dynamicssmb2/DynamicsBCPublicFeeds/_packaging/MSSymbolsV2/nuget/v3/index.json",
-      "versioningTemplate": "nuget"
+      "versioningTemplate": "nuget",
+      "autoReplaceStringTemplate": "{{replace \"^(\\d+\\.\\d+\\.\\d+)$\" \"$1.0\" newValue}}"
     },
     {
       "customType": "jsonata",
@@ -42,7 +44,8 @@
       ],
       "datasourceTemplate": "nuget",
       "registryUrlTemplate": "https://pkgs.dev.azure.com/dynamicssmb2/DynamicsBCPublicFeeds/_packaging/MSSymbolsV2/nuget/v3/index.json",
-      "versioningTemplate": "nuget"
+      "versioningTemplate": "nuget",
+      "autoReplaceStringTemplate": "{{replace \"^(\\d+\\.\\d+\\.\\d+)$\" \"$1.0\" newValue}}"
     },
     {
       "customType": "jsonata",
@@ -55,18 +58,10 @@
       ],
       "datasourceTemplate": "nuget",
       "registryUrlTemplate": "https://pkgs.dev.azure.com/dynamicssmb2/DynamicsBCPublicFeeds/_packaging/AppSourceSymbols/nuget/v3/index.json",
-      "versioningTemplate": "nuget"
+      "versioningTemplate": "nuget",
+      "autoReplaceStringTemplate": "{{replace \"^(\\d+\\.\\d+\\.\\d+)$\" \"$1.0\" newValue}}"
     }
   ],
-  "postUpgradeTasks": {
-    "commands": [
-      "sed -i -E 's/(\"(version|application|platform)\": \")([0-9]+\\.[0-9]+\\.[0-9]+)\"/\\1\\3.0\"/g' {{{packageFile}}}"
-    ],
-    "fileFilters": [
-      "**/app.json"
-    ],
-    "executionMode": "update"
-  },
   "packageRules": [
     {
       "matchManagers": [
